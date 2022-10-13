@@ -1,6 +1,11 @@
-public class Hobbit {
-        int power = 0;
-        int hp = 3;
-//     - attributes: int power=0, int hp=3
-//   - methods: void kick(Character c) { toCry() }
+public class Hobbit extends Character{
+    static int power = 0;
+    static int hp = 3;
+    @Override
+    public void kick(Character c){
+        toCry();
     }
+    private void toCry(){
+        System.out.println("Go away or I'll cry!!!!");
+    }
+}

@@ -4,6 +4,7 @@ Implement the heroes game in text mode
 **class Character**
   - attributes: int power, in hp
   - methods: void kick(Character c), boolean isAlive()
+
 **class Hobbit**
   - attributes: int power=0, int hp=3
   - methods: void kick(Character c) { toCry() }

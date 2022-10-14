@@ -27,7 +27,7 @@ public abstract class Character {
     }
 
     public Boolean isAlive(){
-        if (this.getHp() < 0){
+        if (this.getHp() <= 0){
             return Boolean.FALSE;
         }
         else{
@@ -38,8 +38,9 @@ public abstract class Character {
         return this.getClass().getSimpleName() + "{hp="+this.getHp() +", power="+this.getPower()+"}";
     }
     public void kick(Character c){
-        this.setHp(c.getHp() - this.getPower());
+        if (c.getHp() - this.getPower()>=0){
+            c.setHp(c.getHp() - this.getPower());
+        }
+        else c.setHp(0);
     }
 }
-
-
